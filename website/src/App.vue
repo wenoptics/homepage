@@ -1,7 +1,9 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+
+import Entry from './components/Entry.vue'
+import FancyLink from './components/FancyLink.vue'
+import SectionBlock from "./components/SectionBlock.vue";
+
 </script>
 
 <template>
@@ -13,7 +15,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <div class="w-full max-w-md">
 
       <!-- Different blocks -->
-      <div class="flex flex-col divide-y gap-y-12">
+      <div class="flex flex-col gap-y-12">
 
         <div>
 
@@ -21,20 +23,29 @@ import HelloWorld from './components/HelloWorld.vue'
                src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png"
                alt=""/>
 
-          <h1 class="text-xl font-semibold">Grayson Wen</h1>
-
-        </div>
-
-        <div>
-          <div class="section-title uppercase text-sm font-normal">Currently</div>
-
-          <div class="section-item">
-            <div class=""></div>
+          <h1 class="my-3 text-2xl font-semibold">Grayson Wen</h1>
+          <div class="flex flex-nowrap gap-4">
+            <FancyLink text="GitHub" size=".9rem"/>
+            <FancyLink text="LinkedIn" size=".9rem"/>
           </div>
 
         </div>
 
-        <div>2</div>
+        <hr>
+
+        <SectionBlock title="Currently">
+          <Entry title="Project 1" description="Some description of the project"></Entry>
+          <Entry title="Project 2" description="Some description of the project"></Entry>
+        </SectionBlock>
+
+        <hr>
+
+        <SectionBlock title="Projects">
+          <Entry title="Project 1" description="Some description of the project"></Entry>
+          <Entry title="Project 2" description="Some description of the project"></Entry>
+          <Entry title="Project 2" description="Some description of the project"></Entry>
+        </SectionBlock>
+
 
       </div>
 

@@ -9,9 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.41"
+    "vue": "^3.2.41",
+    "vue-icon": "^2.3.0"
   },
   "devDependencies": {
+    "@iconify/vue": "^4.0.0",
     "@vitejs/plugin-vue": "^3.2.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.18",
