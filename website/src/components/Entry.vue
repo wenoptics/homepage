@@ -3,7 +3,6 @@ import FancyLink from "./FancyLink.vue";
 
 defineProps<{
   title: string
-  description: string
 }>()
 
 </script>
@@ -13,7 +12,7 @@ defineProps<{
   <div class="">
     <FancyLink :text="title" size="1.2rem" class="font-semibold"/>
     <div class="tracking-normal">
-      {{ description }}
+      <slot></slot>
     </div>
   </div>
 

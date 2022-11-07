@@ -19,7 +19,7 @@ import SectionBlock from "./components/SectionBlock.vue";
 
         <div>
 
-          <img class="inline-block h-12 w-12 rounded-full ring-2 dark:ring-white ring-black"
+          <img class="inline-block h-16 w-16 rounded-full ring-2 dark:ring-amber-100 ring-black"
                src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png"
                alt=""/>
 
@@ -31,19 +31,43 @@ import SectionBlock from "./components/SectionBlock.vue";
 
         </div>
 
-        <hr>
+        <hr class="dark:border-amber-50 opacity-50">
 
         <SectionBlock title="Currently">
-          <Entry title="Project 1" description="Some description of the project"></Entry>
-          <Entry title="Project 2" description="Some description of the project"></Entry>
+          <Entry title="Project 1">
+            Some description of the project
+          </Entry>
+          <Entry title="Project 2">
+            Some description of the project
+          </Entry>
         </SectionBlock>
 
-        <hr>
+        <hr class="dark:border-amber-50 opacity-50">
 
         <SectionBlock title="Projects">
-          <Entry title="Project 1" description="Some description of the project"></Entry>
-          <Entry title="Project 2" description="Some description of the project"></Entry>
-          <Entry title="Project 2" description="Some description of the project"></Entry>
+          <Entry title="Project 1">
+            Some description of the project
+          </Entry>
+          <Entry title="Project 2">
+            Some description of the project
+          </Entry>
+          <Entry title="Project 2">
+            Some description of the project
+          </Entry>
+        </SectionBlock>
+
+        <hr class="dark:border-amber-50 opacity-50">
+
+        <SectionBlock title="My Open-Source">
+          <Entry title="Project 1">
+            Some description of the project
+          </Entry>
+          <Entry title="Project 2">
+            Some description of the project
+          </Entry>
+          <Entry title="Project 2">
+            Some description of the project
+          </Entry>
         </SectionBlock>
 
 
