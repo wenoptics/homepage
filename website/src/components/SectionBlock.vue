@@ -1,8 +1,12 @@
 <script setup lang="ts">
 
-defineProps<{
-  title: string
-}>()
+defineProps({
+  title: String,
+  gapY: {
+    type: String,
+    default: "1.5rem"
+  }
+})
 
 </script>
 
@@ -10,7 +14,7 @@ defineProps<{
   <div>
     <div class="tracking-widest uppercase text-sm font-normal pb-6"> {{ title }}</div>
 
-    <div class="flex flex-col gap-y-6">
+    <div class="flex flex-col" :style="{ rowGap: gapY }">
       <slot></slot>
     </div>
 

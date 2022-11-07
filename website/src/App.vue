@@ -3,8 +3,7 @@
 import Entry from './components/Entry.vue'
 import FancyLink from './components/FancyLink.vue'
 import SectionBlock from "./components/SectionBlock.vue";
-
-</script>
+import Separator from "./Separator.vue";</script>
 
 <template>
   <!--  Create the a narrow container -->
@@ -18,9 +17,8 @@ import SectionBlock from "./components/SectionBlock.vue";
       <div class="flex flex-col gap-y-12">
 
         <div>
-
           <img class="inline-block h-16 w-16 rounded-full ring-2 dark:ring-amber-100 ring-black"
-               src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png"
+               src="https://avatars.githubusercontent.com/u/9987429?v=4"
                alt=""/>
 
           <h1 class="my-3 text-2xl font-semibold">Grayson Wen</h1>
@@ -28,10 +26,9 @@ import SectionBlock from "./components/SectionBlock.vue";
             <FancyLink text="GitHub" size=".9rem"/>
             <FancyLink text="LinkedIn" size=".9rem"/>
           </div>
-
         </div>
 
-        <hr class="dark:border-amber-50 opacity-50">
+        <Separator/>
 
         <SectionBlock title="Currently">
           <Entry title="Project 1">
@@ -42,7 +39,7 @@ import SectionBlock from "./components/SectionBlock.vue";
           </Entry>
         </SectionBlock>
 
-        <hr class="dark:border-amber-50 opacity-50">
+        <Separator/>
 
         <SectionBlock title="Projects">
           <Entry title="Project 1">
@@ -56,18 +53,12 @@ import SectionBlock from "./components/SectionBlock.vue";
           </Entry>
         </SectionBlock>
 
-        <hr class="dark:border-amber-50 opacity-50">
+        <Separator/>
 
-        <SectionBlock title="My Open-Source">
-          <Entry title="Project 1">
-            Some description of the project
-          </Entry>
-          <Entry title="Project 2">
-            Some description of the project
-          </Entry>
-          <Entry title="Project 2">
-            Some description of the project
-          </Entry>
+        <SectionBlock title="My Open-Source" gap-y=".5rem">
+          <FancyLink text="LinkedIn" size="1rem" class="font-light" />
+          <FancyLink text="LinkedIn" size="1rem" class="font-light" />
+          <FancyLink text="LinkedIn" size="1rem" class="font-light" />
         </SectionBlock>
 
 
@@ -79,18 +70,3 @@ import SectionBlock from "./components/SectionBlock.vue";
 
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>

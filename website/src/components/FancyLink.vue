@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import {ref} from "vue";
 import { Icon } from '@iconify/vue';
 
 defineProps({
@@ -8,16 +9,55 @@ defineProps({
     default: '1rem'
   }
 })
+
+const isActive = ref(false)
+
 </script>
 
 <template>
-  <div class="flex flex-nowrap place-items-center" :style="{fontSize: size}">
+  <div class="flex flex-nowrap place-items-center" :style="{fontSize: size}"
+       @mouseenter="isActive = true"
+       @mouseleave="isActive = false"
+       :class="{hovering: isActive}"
+  >
     <span>{{ text }}</span>
-    <Icon
+    <span
+        class="link-effect"
         :style="{marginLeft: `calc(${size} / 2)`}"
-        icon="mdi:arrow-right"
-        :inline="true"
-        :height="size"
-    ></Icon>
+    >
+      <Icon
+          icon="mdi:arrow-right"
+          :inline="true"
+          :height="size"
+      />
+    </span>
   </div>
 </template>
+
+<style scoped>
+
+.link-effect {
+  will-change: box-shadow, color;
+
+  box-shadow: inset 0 0 0 0 #bbcde100;
+  margin: 0 -.25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.hovering .link-effect {
+  box-shadow: inset 100px 0 0 0 #05313e;
+  color: white;
+}
+
+.hovering {
+  cursor: pointer;
+}
+
+.dark .link-effect {
+  box-shadow: inset 100px 0 0 0 #05313e00;
+}
+.dark .hovering .link-effect {
+  box-shadow: inset 0 0 0 0 #bbcde1ff;
+  color: white;
+}
+</style>
