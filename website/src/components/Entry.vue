@@ -11,9 +11,9 @@ defineProps<{
 
   <div class="">
     <FancyLink :text="title" size="1.2rem" class="font-semibold"/>
-    <div class="tracking-normal">
+    <p class="mt-2 tracking-normal font-thin truncate text-ellipsis overflow-hidden">
       <slot></slot>
-    </div>
+    </p>
   </div>
 
 

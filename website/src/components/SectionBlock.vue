@@ -12,7 +12,7 @@ defineProps({
 
 <template>
   <div>
-    <div class="tracking-widest uppercase text-sm font-normal pb-6"> {{ title }}</div>
+    <div class="tracking-widest uppercase text-sm font-normal pb-6 opacity-80"> {{ title }}</div>
 
     <div class="flex flex-col" :style="{ rowGap: gapY }">
       <slot></slot>

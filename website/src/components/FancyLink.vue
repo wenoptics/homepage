@@ -34,30 +34,33 @@ const isActive = ref(false)
   </div>
 </template>
 
-<style scoped>
-
-.link-effect {
-  will-change: box-shadow, color;
-
-  box-shadow: inset 0 0 0 0 #bbcde100;
-  margin: 0 -.25rem;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
-
-.hovering .link-effect {
-  box-shadow: inset 100px 0 0 0 #05313e;
-  color: white;
-}
+<style scoped lang="scss">
 
 .hovering {
   cursor: pointer;
 }
 
-.dark .link-effect {
-  box-shadow: inset 100px 0 0 0 #05313e00;
+.link-effect {
+  will-change: box-shadow, color;
+  margin: 0 -.25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+  box-shadow: inset 0 0 0 0 #bbcde100;
 }
-.dark .hovering .link-effect {
-  box-shadow: inset 0 0 0 0 #bbcde1ff;
+.hovering .link-effect {
+  box-shadow: inset 100px 0 0 0 #05313eff;
   color: white;
+}
+
+/* Dark mode */
+
+.dark {
+  .link-effect {
+    box-shadow: inset 0 0 0 0 #05313e00;
+  }
+  .hovering .link-effect {
+    box-shadow: inset 100px 0 0 0 #bbcde1ff;
+    color: black;
+  }
 }
 </style>

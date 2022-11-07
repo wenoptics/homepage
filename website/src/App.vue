@@ -19,7 +19,7 @@ import Separator from "./Separator.vue";</script>
         <div>
           <img class="inline-block h-16 w-16 rounded-full ring-2 dark:ring-amber-100 ring-black"
                src="https://avatars.githubusercontent.com/u/9987429?v=4"
-               alt=""/>
+               alt="My avatar"/>
 
           <h1 class="my-3 text-2xl font-semibold">Grayson Wen</h1>
           <div class="flex flex-nowrap gap-4">
@@ -46,7 +46,7 @@ import Separator from "./Separator.vue";</script>
             Some description of the project
           </Entry>
           <Entry title="Project 2">
-            Some description of the project
+            Some description of the project, very looooooooooooooooooooooooooooooooooooog
           </Entry>
           <Entry title="Project 2">
             Some description of the project
@@ -56,9 +56,9 @@ import Separator from "./Separator.vue";</script>
         <Separator/>
 
         <SectionBlock title="My Open-Source" gap-y=".5rem">
-          <FancyLink text="LinkedIn" size="1rem" class="font-light" />
-          <FancyLink text="LinkedIn" size="1rem" class="font-light" />
-          <FancyLink text="LinkedIn" size="1rem" class="font-light" />
+          <FancyLink text="Project 1" size="1rem" class="font-light" />
+          <FancyLink text="Project 2" size="1rem" class="font-light" />
+          <FancyLink text="Project 3" size="1rem" class="font-light" />
         </SectionBlock>
 
 
