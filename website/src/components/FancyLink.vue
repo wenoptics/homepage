@@ -4,6 +4,10 @@ import { Icon } from '@iconify/vue';
 
 defineProps({
   text: String,
+  href: {
+    type: String,
+    default: '#'
+  },
   size: {
     type: String,
     default: '1rem'
@@ -15,14 +19,15 @@ const isActive = ref(false)
 </script>
 
 <template>
-  <div class="flex flex-nowrap place-items-center" :style="{fontSize: size}"
-       @mouseenter="isActive = true"
-       @mouseleave="isActive = false"
-       :class="{hovering: isActive}"
+  <a class="flex flex-nowrap place-items-center" :style="{fontSize: size}"
+     :href="href"
+     @mouseenter="isActive = true"
+     @mouseleave="isActive = false"
+     :class="{hovering: isActive}"
   >
     <span>{{ text }}</span>
     <span
-        class="link-effect"
+        class="link-effect horizontal"
         :style="{marginLeft: `calc(${size} / 2)`}"
     >
       <Icon
@@ -31,7 +36,7 @@ const isActive = ref(false)
           :height="size"
       />
     </span>
-  </div>
+  </a>
 </template>
 
 <style scoped lang="scss">
@@ -42,25 +47,36 @@ const isActive = ref(false)
 
 .link-effect {
   will-change: box-shadow, color;
-  margin: 0 -.25rem;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 
-  box-shadow: inset 0 0 0 0 #bbcde100;
-}
-.hovering .link-effect {
-  box-shadow: inset 100px 0 0 0 #05313eff;
-  color: white;
+  &.horizontal {
+    box-shadow: inset 0 0 0 0 #bbcde100;
+
+    .dark & {
+      /* Dark mode */
+      box-shadow: inset 0 0 0 0 #05313e00;
+    }
+
+    .hovering & {
+      box-shadow: inset 100px 0 0 0 #05313eff;
+      color: white;
+
+      .dark & {
+        /* Dark mode */
+        box-shadow: inset 100px 0 0 0 #bbcde1ff;
+        color: black;
+      }
+    }
+  }
+
+  //&.vertical {
+  //  box-shadow: inset 0 0 0 0 #bbcde100;
+  //
+  //  .hovering & {
+  //    box-shadow: inset 0 -2px 0 0 #05313e;
+  //  }
+  //}
 }
 
-/* Dark mode */
 
-.dark {
-  .link-effect {
-    box-shadow: inset 0 0 0 0 #05313e00;
-  }
-  .hovering .link-effect {
-    box-shadow: inset 100px 0 0 0 #bbcde1ff;
-    color: black;
-  }
-}
 </style>

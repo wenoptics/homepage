@@ -23,8 +23,8 @@ import Separator from "./Separator.vue";</script>
 
           <h1 class="my-3 text-2xl font-semibold">Grayson Wen</h1>
           <div class="flex flex-nowrap gap-4">
-            <FancyLink text="GitHub" size=".9rem"/>
-            <FancyLink text="LinkedIn" size=".9rem"/>
+            <FancyLink size=".9rem" text="GitHub" href="https://github.com/wenoptics" />
+            <FancyLink size=".9rem" text="LinkedIn" />
           </div>
         </div>
 
