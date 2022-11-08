@@ -47,13 +47,13 @@ const isActive = ref(false)
 
 .link-effect {
   will-change: box-shadow, color;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  transition: color .3s ease-out, box-shadow 1s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   &.horizontal {
     box-shadow: inset 0 0 0 0 #bbcde100;
 
+    /* Dark mode */
     .dark & {
-      /* Dark mode */
       box-shadow: inset 0 0 0 0 #05313e00;
     }
 
@@ -61,21 +61,14 @@ const isActive = ref(false)
       box-shadow: inset 100px 0 0 0 #05313eff;
       color: white;
 
+      /* Dark mode */
       .dark & {
-        /* Dark mode */
         box-shadow: inset 100px 0 0 0 #bbcde1ff;
         color: black;
       }
     }
   }
 
-  //&.vertical {
-  //  box-shadow: inset 0 0 0 0 #bbcde100;
-  //
-  //  .hovering & {
-  //    box-shadow: inset 0 -2px 0 0 #05313e;
-  //  }
-  //}
 }
 
 
