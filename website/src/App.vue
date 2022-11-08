@@ -6,6 +6,7 @@ import Entry from './components/Entry.vue'
 import FancyLink from './components/FancyLink.vue'
 import SectionBlock from "./components/SectionBlock.vue";
 import Separator from "./Separator.vue";
+import GlitchEffect from "./components/GlitchEffect.vue";
 
 const linkGithub = ref("https://github.com/wenoptics")
 const linkLinkedIn = ref("https://www.linkedin.com/in/graysonwen/")
@@ -30,6 +31,7 @@ const urlAvatar = ref("https://avatars.githubusercontent.com/u/9987429?v=4")
                alt="My avatar"/>
 
           <h1 class="text-2xl font-semibold">Grayson Wen</h1>
+
           <h2 class="text-lg font-thin">
             Tech enthusiast. Find me on
             <a class="opacity-50" :href="linkGithub">

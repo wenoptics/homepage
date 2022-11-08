@@ -2,6 +2,8 @@
 import {ref} from "vue";
 import { Icon } from '@iconify/vue';
 
+import GlitchEffect from "./GlitchEffect.vue"
+
 defineProps({
   text: String,
   href: {
@@ -19,13 +21,15 @@ const isActive = ref(false)
 </script>
 
 <template>
-  <a class="flex flex-nowrap place-items-center" :style="{fontSize: size}"
+  <a class="flex flex-nowrap place-items-center no-underline" :style="{fontSize: size}"
      :href="href"
      @mouseenter="isActive = true"
      @mouseleave="isActive = false"
      :class="{hovering: isActive}"
   >
-    <span>{{ text }}</span>
+
+    <GlitchEffect :activated="isActive" :content="text"></GlitchEffect>
+    <!--<span>{{ text }}</span>-->
     <span
         class="link-effect horizontal"
         :style="{marginLeft: `calc(${size} / 2)`}"
