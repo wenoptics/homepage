@@ -47,35 +47,53 @@ const urlAvatar = ref("https://avatars.githubusercontent.com/u/9987429?v=4")
 
         <Separator/>
 
-        <SectionBlock title="Currently">
-          <Entry title="Project 1">
-            Some description of the project
-          </Entry>
-          <Entry title="Project 2">
-            Some description of the project
-          </Entry>
-        </SectionBlock>
+        <!--<SectionBlock title="Currently">-->
+        <!--  <Entry title="Project 1">-->
+        <!--    Some description of the project-->
+        <!--  </Entry>-->
+        <!--  <Entry title="Project 2">-->
+        <!--    Some description of the project-->
+        <!--  </Entry>-->
+        <!--</SectionBlock>-->
 
-        <Separator/>
+        <!--<Separator/>-->
 
         <SectionBlock title="Projects">
-          <Entry title="Project 1">
-            Some description of the project
+          <Entry title="Wipe clean" href="https://github.com/wenoptics/python-wipe-clean">
+            A terminal tool to help clear your terminal in a fun way
           </Entry>
-          <Entry title="Project 2">
-            Some description of the project, very looooooooooooooooooooooooooooooooooooog
+          <Entry title="Make a dump lamp smart" href="https://github.com/wenoptics/dumb-lamp-diy-esp32">
+            Converting a cheap LED lamp to a smart lamp with ESP32
           </Entry>
-          <Entry title="Project 2">
-            Some description of the project
+          <Entry title="Auto Citrix connect">
+            Just some hacks to help fix some crappy technology
+          </Entry>
+          <Entry title="Project Keypad Watch" href="https://wenoptics.github.io/kpw-webpage/">
+            A wearable only for geeks
+          </Entry>
+          <Entry title="Rubik's Cube Robot" href="https://github.com/wenoptics/ubuntu-desktop-novnc">
+            My take on a fully working Rubik's Cube solving machine
+          </Entry>
+          <Entry title="Ubuntu desktop with noVNC" href="https://github.com/wenoptics/Rubiks-Cube-Robot">
+            VNC access and filesystem management from your browser
           </Entry>
         </SectionBlock>
 
         <Separator/>
 
         <SectionBlock title="My Open-Source" gap-y=".5rem">
-          <FancyLink text="Project 1" size="1rem" class="font-light" />
-          <FancyLink text="Project 2" size="1rem" class="font-light" />
-          <FancyLink text="Project 3" size="1rem" class="font-light" />
+          <FancyLink
+              size="1rem" class="font-light"
+              text="CNC polarplotter" href="https://github.com/wenoptics/cnc-polarplotter"
+          />
+          <FancyLink
+              size="1rem" class="font-light"
+              text="Subtitle tools" href="https://github.com/wenoptics/subtitle-tools"
+          />
+          <FancyLink
+              size="1rem" class="font-light"
+              text="python-decora" href="https://github.com/wenoptics/python-decora"
+          />
         </SectionBlock>
 
       </div>

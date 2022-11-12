@@ -28,7 +28,7 @@ const isActive = ref(false)
      :class="{hovering: isActive}"
   >
 
-    <GlitchEffect :activated="isActive" :content="text"></GlitchEffect>
+    <GlitchEffect :activated="isActive" :content="text" />
     <!--<span>{{ text }}</span>-->
     <span
         class="link-effect horizontal"

@@ -21,10 +21,10 @@ defineProps({
 
 @keyframes glitch{
   2%,64%{
-    transform: translate(2px,0) skew(0deg);
+    transform: translate(1px,0) skew(0deg);
   }
   4%,60%{
-    transform: translate(-2px,0) skew(0deg);
+    transform: translate(-1px) skew(0deg);
   }
   62%{
     transform: translate(0,0) skew(5deg);
@@ -63,7 +63,7 @@ defineProps({
 
 div.activated {
 
-  animation: glitch 1s linear infinite;
+  animation: glitch 5s steps(100) infinite;
 
   &:before,
   &:after{
@@ -73,12 +73,12 @@ div.activated {
   }
 
   &:before{
-    animation: glitchTop 2s linear infinite;
+    animation: glitchTop 2s steps(100) infinite;
     clip-path: polygon(0 0, 100% 0, 100% 30%, 0 30%);
   }
 
   &:after{
-    animation: glitchBottom 1.5s linear infinite;
+    animation: glitchBottom 1.75s steps(100) infinite;
     clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
   }
 
